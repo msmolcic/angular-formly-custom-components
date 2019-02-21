@@ -1,0 +1,23 @@
+<div class="grid-container">
+  <h1 class="mat-h1">Dashboard</h1>
+  <mat-grid-list cols="2" rowHeight="350px">
+    <mat-grid-tile>
+      <mat-card class="dashboard-card">
+        <mat-card-content class="dashboard-card-content">
+          <form [formGroup]="form" (ngSubmit)="submit()">
+            <formly-form
+              [model]="model"
+              [fields]="fields"
+              [options]="options"
+              [form]="form"
+            >
+              <button type="submit" class="btn btn-primary submit-button">
+                Submit
+              </button>
+            </formly-form>
+          </form>
+        </mat-card-content>
+      </mat-card>
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>
